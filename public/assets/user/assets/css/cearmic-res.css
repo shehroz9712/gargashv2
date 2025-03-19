@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; Horizontal overflow hatane ke liye */
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile (Max width 768px) */
+@media (max-width: 768px) {
+  /* Hero Section Start */
+
+  /* Buttons */
+
+  /* Hero Section End*/
+
+  /* About Section Start */
+  /* car image in bottom  */
+
+  .double {
+    flex-direction: column;
+    gap: 15px;
+  }
+  /* About Section End */
+
+  /* Service Partner Styling Start */
+
+  /* Service Partner Styling End */
+
+  /* Services Solution Styling Start */
+
+  /* Services Solution Styling End */
+
+  /* box-container Styling start */
+
+  /* box-container Styling End */
+
+  /* Brand Logo Styling Start */
+  /* Brand Logo Styling End */
+}
+
+@media (max-width: 480px) {
+
+  /* Services Solution Styling Start */
+
+  /* Services Solution Styling End */
+}
+
+@media (max-width: 992px) {
+  /* Services Solution Styling Start */
+  /* Services Solution Styling End */
+}
+
+/* /////////////////////////////// */
+
+/* Car Inspection Responsive Styling Start */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* Hero Section */
+
+  /* Buttons */
+  /* Hero Section Styling End */
+
+  /* services-includes Responsive Styling Start */
+  /* services-includes Responsive Styling End */
+
+  /* Form Section Styling Start */
+
+  .input-group {
+    padding: 8px;
+  }
+
+  .double {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Form Section Styling End */
+
+  /* Portfolio Section Styling Start */
+
+  /* Portfolio Section Styling End */
+}
+
+/* Mobile View (max-width: 480px) */
+
+/* services-includes Responsive Styling */
+
+/* Mobile View (max-width: 576px) */
+/* Car Inspection Responsive Styling End */
+
+/* Body Shop Responsive Styling End */
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  /*  Hero Section Styling End  */
+  /*  Hero Section Styling Start  */
+
+  /* Form Section Styling Start */
+
+  .input-group {
+    padding: 8px;
+  }
+
+  .double {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Form Section Styling End */
+}
+
+/* Responsive Design */
+
+/* //////////////////////////////////// */
+/* //////////////////////////////////// */
+/* //////////////////////////////////// */
+/* //////////////////////////////////// */
+
+/* Responsive Design */
+
+/* /////////////////////////// */
+/* /////////////////////////// */
+/* /////////////////////////// */
+
+/* Mobile Responsive */
+
+/* box-container Styling End */
+
+/* Body Shop Responsive Styling End */
+
+/* Major  And Minor Page Styling Start */ 
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  /* All type section styling Start */
+  /* All type section styling End */
+
+  
+
+/* Text Section Styling */
+/* Text Section Styling */
+
+    /* Form Section Responsive Start*/
+    
+        /* Form Section Responsive End */
+        /* Logo Section Styling Start*/
+        /* Logo Section Styling End*/
+
+}
+
+/* Major  And Minor Page Styling End */
+/* Up coming Page Styling Start */
+/* ======= Mobile Responsive ======= */
+@media screen and (max-width: 768px) {
+
+  /* Remove tree images on mobile */
+
+  /* Remove tree images on mobile */
+}
+
+/* Up coming Page Styling End */

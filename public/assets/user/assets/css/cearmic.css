@@ -1,0 +1,1812 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+* {
+  font-family: "Sora", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-color {
+  color: #e6b110;
+}
+
+/* General Repair Page Styling Start */
+/* Hero Section Styling */
+
+/* Overlay */
+
+/* Buttons */
+
+/* About Section styling Start  */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 5px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.double {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* About Section styling End  */
+
+/* Service Partner Styling Start */
+/* Service Partner Styling End */
+
+/* Services Solution Styling Start */
+/* Services Solution Styling End */
+
+/* box-container Styling Start */
+/* box-container Styling End */
+
+/* Brands Section Styling Start */
+
+/* Scrollbar Styling */
+/* Brands Section Styling End */
+
+/* General Repair Page Styling End */
+
+/* Car Inspection Page Styling Start */
+
+/* Hero Section Start */
+/* Hero Section End */
+
+/* services-includes Styling Start */
+/* services-includes Styling End */
+
+/* form-section Stylind Start */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 5px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.double {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* form-section Stylind End */
+
+/* portfolio Section Styling Start */
+
+/* portfolio Section Styling End */
+
+/* Car Inspection Page Styling End */
+
+/* /////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////// */
+
+/* Body Shop Hero Section Start */
+/* Body Shop Hero Section End */
+
+/* atuo-body-service Section Styling Start */
+/* atuo-body-service Section Styling End */
+
+/* body Shop Portfolio Section Styling Start */
+
+/* body Shop Portfolio Section Styling End */
+
+
+
+/* box-container Styling Start */
+/* box-container Styling End */
+
+/* Body Shop Section Styling End */
+
+/* About Us Page Styling Start */
+
+/* hero Seciton  Start*/
+.about-us-hero-section {
+  color: #111;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/about-us-section-bg.png) no-repeat center/cover;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.about-us-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-us-text {
+  width: 50%;
+}
+
+.about-us-heading {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.about-us-description {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.about-us-form-wrapper {
+  width: 45%;
+  background: url("../img/form-bg.png") no-repeat center/cover;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.about-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  padding: 15px;
+  padding-bottom: 60px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.double {
+  width: 100%;
+  display: flex;
+  border: none !important;
+  padding: 0px !important;
+}
+
+.half-width {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.about-us-submit {
+  background: #e6b110;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: -17%;
+  left: 42%;
+}
+
+/* hero Seciton  End*/
+
+/* Specialized Section  Start*/
+/* Specialized Section  End*/
+/* Out Team Section Start */
+/* Out Team Section End */
+
+/* Cearmic Page Styling Start*/
+
+
+/* cearmic Hero Section Styleing Start */
+
+.cearmic-hero-section {
+  /* position: relative; */
+  background: url(../img/cearmic.png) no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  overflow: visible;
+}
+
+/* Overlay Effect */
+.cearmic-hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+}
+
+.cearmic-hero-section h1 {
+  font-size: 130px;
+  font-weight: 900;
+  letter-spacing: -7%;
+  line-height: 99%;
+  padding: 0px 6rem;
+  padding-top: 11rem;
+}
+
+.cearmic-hero-section img {
+  width: 100%;
+  max-width: 75%;
+  height: 100%;
+  position: absolute;
+  bottom: -30%;
+  z-index: 10;
+}
+
+/* cearmic Hero Section Styleing End */
+/* Save Section Styling Start */
+
+.save-section {
+  display: flex;
+  /* height: 100vh; */
+  justify-content: center;
+  align-items: center;
+  padding: 0px 2rem;
+  /* margin-top: 9rem; */
+}
+
+.save-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.save-left h2 {
+  font-size: 58.62px;
+  line-height: 99%;
+  font-weight: 700;
+}
+
+.save-left p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #111;
+}
+
+.save-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.save-bnts {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-bnt {
+  padding: 1rem 2rem;
+  background: #e6b110;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-bnt2 {
+  background-color: transparent;
+  color: #111;
+  border: 2px solid #111;
+}
+
+.save-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.save-right img {
+  width: 100%;
+}
+
+/* Save Section Styling End */
+
+/* Cearmic Form Section Start */
+
+.cearmic-form-seciton {
+  background: url(../img/cearmic-form-bg.png) no-repeat center center/cover;
+}
+
+.ceramic-form-bg {
+  background: url(../img/form-black-bg.png) no-repeat center center/cover;
+  border-radius: 15px;
+}
+
+.cearmic-form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cearmic-form-heading {
+  font-size: 55px;
+  line-height: 85%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cearmic-fomr-btn {
+  bottom: -20%;
+  left: 41%;
+}
+
+/* Cearmic Form Section End */
+
+/* Coating Section styling Start */
+
+.coating-section {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.coating-top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.coating-top h2 {
+  font-size: 68.8px;
+  line-height: 93%;
+  font-weight: bold;
+  padding: 0 20rem;
+  text-align: center;
+}
+
+.coating-top p {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  padding: 0px 5rem;
+}
+
+.coating-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0px 3rem;
+}
+
+.coating-bottom-grid-item {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.coating-bottom-grid-item img {
+  width: 100%;
+}
+
+/* Coating Section styling End */
+
+@media (max-width: 768px) {
+
+  /* Hero Section Start */
+  .cearmic-hero-section {
+    height: 60vh;
+    /* Mobile pe thoda kam height */
+    padding: 3rem 0rem;
+  }
+
+  .cearmic-hero-section h1 {
+    font-size: 70px;
+    /* Mobile pe chhota size */
+    padding: 0px 2rem;
+    padding-top: 5rem;
+    text-align: center;
+  }
+
+  .cearmic-hero-section img {
+    max-width: 120%;
+    /* Image ko thoda responsive banaya */
+    height: auto;
+    bottom: 0%;
+    /* Image ki position adjust */
+    top: 45%;
+    margin: 0 auto;
+  }
+
+  /* Hero Section End */
+  /* Save Section Styling Start */
+  .save-section {
+    flex-direction: column;
+    height: auto;
+    /* Height auto taake content adjust ho */
+    /* padding: 5rem 1rem; */
+    text-align: center;
+  }
+
+  .save-left,
+  .save-right {
+    width: 100%;
+  }
+
+  .save-left {
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .save-left h2 {
+    font-size: 30px;
+    /* Heading ka size chhota */
+    line-height: 110%;
+  }
+
+  .save-left p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .save-bnts {
+    flex-direction: column;
+    /* Buttons stack honge */
+    width: 100%;
+  }
+
+  .save-bnt {
+    width: 100%;
+    max-width: 300px;
+    /* Buttons ka size control */
+  }
+
+  .save-right img {
+    display: none;
+  }
+
+  /* Save Section Styling End */
+
+  /* Form Section Start*/
+
+  .cearmic-fomr-btn {
+    bottom: -15%;
+    left: 50%;
+  }
+
+  .cearmic-form-heading {
+    font-size: 30px;
+    margin-top: 3rem;
+  }
+
+  /* Form Section End*/
+  /* Coating Section Start*/
+
+  .coating-section {
+    gap: 3rem;
+    padding: 3rem 1rem;
+  }
+
+  .coating-top h2 {
+    font-size: 40px;
+    /* Heading size chhota */
+    padding: 0 2rem;
+    line-height: 110%;
+  }
+
+  .coating-top p {
+    padding: 0px;
+  }
+
+  .coating-bottom p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 0rem;
+  }
+
+  .coating-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 1rem;
+  }
+
+  .coating-bottom-grid-item {
+    display: flex;
+    flex-direction: column-reverse !important;
+    /* Forcefully reverse order */
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .coating-bottom-grid-item img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* Center images */
+  }
+
+  /* Coating Section End*/
+}
+
+
+
+/* Cearmic Page Styling End*/
+
+
+@media (max-width: 768px) {
+
+  /* Hero Section Styling Start */
+  .about-us-hero-section {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .about-us-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-us-text {
+    width: 100%;
+  }
+
+  .about-us-heading {
+    font-size: 32px;
+  }
+
+  .about-us-description {
+    font-size: 14px;
+  }
+
+  .about-us-form-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .input-group {
+    flex-direction: row;
+    padding: 8px;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .about-us-submit {
+    width: 60px;
+    height: 60px;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hero Section Styling End*/
+}
+
+@media (max-width: 480px) {
+
+  /* Hero Section Styling Start*/
+  .about-us-heading {
+    font-size: 25px;
+  }
+
+  .about-us-description {
+    margin: 15px;
+    font-size: 12px;
+  }
+
+  .about-us-form {
+    gap: 10px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    padding: 0px;
+  }
+
+  .about-us-submit {
+    width: 80px;
+    height: 80px;
+    bottom: -13%;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    /* Ensure image & input stay in one line */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* Adjust spacing */
+    padding: 8px;
+    border: 2px solid #9b9b9b;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .double {
+    border: none;
+    padding: 0px;
+  }
+
+  .input-group input {
+    flex: 1;
+    /* Allows input to take full remaining space */
+    width: 100%;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+
+  /* Hero Section Styling End*/
+  /* about us section Styling */
+  /* our-team-section */
+
+
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+
+
+/* About Us Page Styling End */
+
+/* Auto Spa Service Styling Start */
+
+section {
+  overflow: hidden;
+}
+
+.main-color {
+  color: #e6b110;
+}
+
+/* auto-spa-hero */
+/* Hero Section Start */
+/* Hero Section End */
+
+/* We-do-all- */
+
+/* form-section Stylind Start */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 5px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.double {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.half-width {
+  width: 48%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  /* Image aur input ko center align karega */
+  gap: 8px;
+  /* Image aur input ke darmiyan space */
+  width: 100%;
+}
+
+.input-group img {
+  height: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  /* Input full width le */
+  flex: 1;
+  /* Bacha hua space fill kare */
+}
+
+/* form-section Stylind End */
+/* specialists Section */
+/* we-deal-section Styling  Start*/
+/* we-deal-section Styling  End*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hero Section End */
+  /* We Do Section Start */
+}
+
+/* We Do Section End */
+/* Form Section Start */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hero Section End */
+  /* We Do Section Start */
+  /* We Do Section End */
+  /* Form Section Start */
+
+  .form {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .input-group {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .double {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .input-group img {
+    height: 16px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  /* Remove car group image for mobile */
+  /* Form Section End */
+  /* specialists Start*/
+  /* specialists End */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+  /* Tablet View */
+  /* we-deal-section Start */
+
+  /* we-deal-section End */
+}
+
+
+
+
+/* Auto Spa Service Styling End */
+
+
+
+/* Major  And Minor Page Styling Start */
+
+/* All Type Section Styling Start */
+.content {
+  display: none;
+}
+
+/* All Type Section Styling End */
+
+/* Major And minor form section styling start */
+
+/* Major And minor form section styling End */
+
+/* text-section Start  */
+
+/* text-section End */
+
+/* Logo Section Start */
+/* Backgrounds for each logo-item */
+
+
+/* Logo Section End */
+
+
+
+/* Major  And Minor Page Styling End */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+* {
+  font-family: "Sora", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-color {
+  color: #e6b110;
+}
+
+/* General Repair Page Styling Start */
+/* Hero Section Styling */
+
+/* Overlay */
+
+/* Buttons */
+
+/* About Section styling Start  */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 5px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.double {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* About Section styling End  */
+
+/* Service Partner Styling Start */
+/* Service Partner Styling End */
+
+/* Services Solution Styling Start */
+/* Services Solution Styling End */
+
+/* box-container Styling Start */
+/* box-container Styling End */
+
+/* Brands Section Styling Start */
+
+/* Scrollbar Styling */
+/* Brands Section Styling End */
+
+/* General Repair Page Styling End */
+
+/* Car Inspection Page Styling Start */
+
+/* Hero Section Start */
+/* Hero Section End */
+
+/* services-includes Styling Start */
+/* services-includes Styling End */
+
+/* form-section Stylind Start */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 5px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.double {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* form-section Stylind End */
+
+/* portfolio Section Styling Start */
+
+/* portfolio Section Styling End */
+
+/* Car Inspection Page Styling End */
+
+/* /////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////// */
+
+/* Body Shop Hero Section Start */
+/* Body Shop Hero Section End */
+
+/* atuo-body-service Section Styling Start */
+/* atuo-body-service Section Styling End */
+
+/* body Shop Portfolio Section Styling Start */
+
+/* body Shop Portfolio Section Styling End */
+
+
+
+/* box-container Styling Start */
+/* box-container Styling End */
+
+/* Body Shop Section Styling End */
+
+/* About Us Page Styling Start */
+
+/* hero Seciton  Start*/
+.about-us-hero-section {
+  color: #111;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/about-us-section-bg.png) no-repeat center/cover;
+}
+
+.about-us-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.about-us-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-us-text {
+  width: 50%;
+}
+
+.about-us-heading {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.about-us-description {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.about-us-form-wrapper {
+  width: 45%;
+  background: url("../img/form-bg.png") no-repeat center/cover;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.about-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  padding: 15px;
+  padding-bottom: 60px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.double {
+  width: 100%;
+  display: flex;
+  border: none !important;
+  padding: 0px !important;
+}
+
+.half-width {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.about-us-submit {
+  background: #e6b110;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: -17%;
+  left: 42%;
+}
+
+/* hero Seciton  End*/
+
+/* Specialized Section  Start*/
+/* Specialized Section  End*/
+/* Out Team Section Start */
+/* Out Team Section End */
+
+/* Cearmic Page Styling Start*/
+
+
+/* cearmic Hero Section Styleing Start */
+
+.cearmic-hero-section {
+  /* position: relative; */
+  background: url(../img/cearmic.png) no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  overflow: visible;
+}
+
+/* Overlay Effect */
+.cearmic-hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+}
+
+.cearmic-hero-section h1 {
+  font-size: 130px;
+  font-weight: 900;
+  letter-spacing: -7%;
+  line-height: 99%;
+  padding: 0px 6rem;
+  padding-top: 11rem;
+}
+
+.cearmic-hero-section img {
+  width: 100%;
+  max-width: 75%;
+  height: 100%;
+  position: absolute;
+  bottom: -30%;
+  z-index: 10;
+}
+
+/* cearmic Hero Section Styleing End */
+/* Save Section Styling Start */
+
+.save-section {
+  display: flex;
+  /* height: 100vh; */
+  justify-content: center;
+  align-items: center;
+  /* padding: 0px 2rem; */
+  margin-top: 9rem;
+}
+
+.save-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.save-left h2 {
+  font-size: 58.62px;
+  line-height: 99%;
+  font-weight: 700;
+}
+
+.save-left p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #111;
+}
+
+.save-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.save-bnts {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-bnt {
+  padding: 1rem 2rem;
+  background: #e6b110;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-bnt2 {
+  background-color: transparent;
+  color: #111;
+  border: 2px solid #111;
+}
+
+.save-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.save-right img {
+  width: 100%;
+}
+
+/* Save Section Styling End */
+
+/* Cearmic Form Section Start */
+
+.cearmic-form-seciton {
+  background: url(../img/cearmic-form-bg.png) no-repeat center center/cover;
+}
+
+.ceramic-form-bg {
+  background: url(../img/form-black-bg.png) no-repeat center center/cover;
+  border-radius: 15px;
+}
+
+.cearmic-form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cearmic-form-heading {
+  font-size: 55px;
+  line-height: 85%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cearmic-fomr-btn {
+  bottom: -20%;
+  left: 41%;
+}
+
+/* Cearmic Form Section End */
+
+/* Coating Section styling Start */
+
+.coating-section {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+.coating-top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.coating-top h2 {
+  font-size: 68.8px;
+  line-height: 93%;
+  font-weight: bold;
+  padding: 0 20rem;
+  text-align: center;
+}
+
+.coating-top p {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  padding: 0px 5rem;
+}
+
+.coating-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0px 3rem;
+}
+
+.coating-bottom-grid-item {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.coating-bottom-grid-item img {
+  width: 100%;
+}
+
+/* Coating Section styling End */
+
+@media (max-width: 768px) {
+
+  /* Hero Section Start */
+  .cearmic-hero-section {
+    height: 60vh;
+    /* Mobile pe thoda kam height */
+    padding: 3rem 0rem;
+  }
+
+  .cearmic-hero-section h1 {
+    font-size: 70px;
+    /* Mobile pe chhota size */
+    padding: 0px 2rem;
+    padding-top: 5rem;
+    text-align: center;
+  }
+
+  .cearmic-hero-section img {
+    max-width: 120%;
+    /* Image ko thoda responsive banaya */
+    height: auto;
+    bottom: 0%;
+    /* Image ki position adjust */
+    top: 45%;
+    margin: 0 auto;
+  }
+
+  /* Hero Section End */
+  /* Save Section Styling Start */
+  .save-section {
+    flex-direction: column;
+    height: auto;
+    /* Height auto taake content adjust ho */
+    /* padding: 5rem 1rem; */
+    text-align: center;
+  }
+
+  .save-left,
+  .save-right {
+    width: 100%;
+  }
+
+  .save-left {
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .save-left h2 {
+    font-size: 30px;
+    /* Heading ka size chhota */
+    line-height: 110%;
+  }
+
+  .save-left p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .save-bnts {
+    flex-direction: column;
+    /* Buttons stack honge */
+    width: 100%;
+  }
+
+  .save-bnt {
+    width: 100%;
+    max-width: 300px;
+    /* Buttons ka size control */
+  }
+
+  .save-right img {
+    display: none;
+  }
+
+  /* Save Section Styling End */
+
+  /* Form Section Start*/
+
+  .cearmic-fomr-btn {
+    bottom: -15%;
+    left: 50%;
+  }
+
+  .cearmic-form-heading {
+    font-size: 30px;
+    margin-top: 3rem;
+  }
+
+  /* Form Section End*/
+  /* Coating Section Start*/
+
+  .coating-section {
+    gap: 3rem;
+    padding: 3rem 1rem;
+  }
+
+  .coating-top h2 {
+    font-size: 40px;
+    /* Heading size chhota */
+    padding: 0 2rem;
+    line-height: 110%;
+  }
+
+  .coating-top p {
+    padding: 0px;
+  }
+
+  .coating-bottom p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 0rem;
+  }
+
+  .coating-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 1rem;
+  }
+
+  .coating-bottom-grid-item {
+    display: flex;
+    flex-direction: column-reverse !important;
+    /* Forcefully reverse order */
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .coating-bottom-grid-item img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* Center images */
+  }
+
+  /* Coating Section End*/
+}
+
+
+
+/* Cearmic Page Styling End*/
+
+
+@media (max-width: 768px) {
+
+  /* Hero Section Styling Start */
+  .about-us-hero-section {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .about-us-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-us-text {
+    width: 100%;
+  }
+
+  .about-us-heading {
+    font-size: 32px;
+  }
+
+  .about-us-description {
+    font-size: 14px;
+  }
+
+  .about-us-form-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .input-group {
+    flex-direction: row;
+    padding: 8px;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .about-us-submit {
+    width: 60px;
+    height: 60px;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hero Section Styling End*/
+}
+
+@media (max-width: 480px) {
+
+  /* Hero Section Styling Start*/
+  .about-us-heading {
+    font-size: 25px;
+  }
+
+  .about-us-description {
+    margin: 15px;
+    font-size: 12px;
+  }
+
+  .about-us-form {
+    gap: 10px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    padding: 0px;
+  }
+
+  .about-us-submit {
+    width: 80px;
+    height: 80px;
+    bottom: -13%;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    /* Ensure image & input stay in one line */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* Adjust spacing */
+    padding: 8px;
+    border: 2px solid #9b9b9b;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .double {
+    border: none;
+    padding: 0px;
+  }
+
+  .input-group input {
+    flex: 1;
+    /* Allows input to take full remaining space */
+    width: 100%;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+
+  /* Hero Section Styling End*/
+  /* about us section Styling */
+  /* our-team-section */
+
+
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////// */
+
+
+/* About Us Page Styling End */
+
+/* Auto Spa Service Styling Start */
+
+section {
+  overflow: hidden;
+}
+
+.main-color {
+  color: #e6b110;
+}
+
+/* auto-spa-hero */
+/* Hero Section Start */
+/* Hero Section End */
+
+/* We-do-all- */
+
+/* form-section Stylind Start */
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 5px;
+  border: 2px solid #9b9b9b;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.double {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.half-width {
+  width: 48%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  /* Image aur input ko center align karega */
+  gap: 8px;
+  /* Image aur input ke darmiyan space */
+  width: 100%;
+}
+
+.input-group img {
+  height: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  /* Input full width le */
+  flex: 1;
+  /* Bacha hua space fill kare */
+}
+
+/* form-section Stylind End */
+/* specialists Section */
+/* we-deal-section Styling  Start*/
+/* we-deal-section Styling  End*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hero Section End */
+  /* We Do Section Start */
+}
+
+/* We Do Section End */
+/* Form Section Start */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Hero Section End */
+  /* We Do Section Start */
+  /* We Do Section End */
+  /* Form Section Start */
+
+  .form {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .input-group {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .double {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .input-group img {
+    height: 16px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  /* Remove car group image for mobile */
+  /* Form Section End */
+  /* specialists Start*/
+  /* specialists End */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 1024px) {
+  /* Tablet View */
+  /* we-deal-section Start */
+
+  /* we-deal-section End */
+}
+
+
+
+
+/* Auto Spa Service Styling End */
+
+
+
+/* Major  And Minor Page Styling Start */
+
+/* All Type Section Styling Start */
+.content {
+  display: none;
+}
+
+/* All Type Section Styling End */
+
+/* Major And minor form section styling start */
+
+/* Major And minor form section styling End */
+
+/* text-section Start  */
+
+/* text-section End */
+
+/* Logo Section Start */
+/* Backgrounds for each logo-item */
+
+
+/* Logo Section End */
+
+
+
+/* Major  And Minor Page Styling End */
+
+/* up Coming page Styling Start */
+/* Hero Start */
+
+/* Hero End */
+
+/* Text Section start */
+/* Text Section End */
+/* blog-section Start*/
+/* blog-section End*/
+
+/* Line Start */
+/* Line End */
+
+/* F&Q Section Start */
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* F&Q Section End */
+
+
+/* up Coming page Styling End */

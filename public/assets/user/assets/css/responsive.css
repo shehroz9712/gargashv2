@@ -1,0 +1,238 @@
+body {
+  overflow-x: hidden;
+}
+
+/* auto spa Styling Start */
+
+.auto-spa-bg {
+  background: url(../img/auto-spa-service-hero-bg.png) no-repeat center
+    center/cover;
+}
+.auto-spa-form-bg {
+  background: url(../img/auto-spa-service-form-bg.png) no-repeat center
+    center/cover;
+}
+.warrenty-form-bg {
+  background: url(../img/warrenty-form-bg.png) no-repeat center center/cover;
+}
+.warrenty-hero-bg {
+  background: url(../img/warrenty-hero-bg.png) no-repeat center center/cover;
+}
+
+.auto-spa-full-container-bg {
+  background: url(../img/atuo-spa-specialists.png) no-repeat center center/cover;
+}
+/* auto spa Styling end */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* Index Page Styling Start */
+
+  .index-hero-card-text-font-size {
+    font-size: 1rem;
+  }
+  .slider-sec .slick-prev:before {
+    content: "";
+    font-family: "FontAwesome";
+    background-image: url(../img/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    left: 0;
+  }
+
+  .slider-sec .slick-next:before {
+    content: "";
+    font-family: "FontAwesome";
+    background-image: url(../img/right-arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20%;
+    height: 45%;
+    position: absolute;
+    right: 0;
+    bottom: -25%;
+    opacity: 1;
+  }
+  .offers-section::after {
+    display: none;
+  }
+
+  .process-card-wrapper {
+    padding: 6px 25px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  /* Index Page Styling End */
+
+  /* Contract Page Styling Start */
+
+  .contract-icons-img-mobile-responsive {
+    width: 30% !important;
+  }
+
+  .contract-why-Choose-heading-font-size {
+    font-size: calc(1.325rem + 0.9vw) !important;
+  }
+
+  /* Contract Page Styling End */
+
+  /* Promotions Page Styling Start */
+
+  .promotion-section-bg::before {
+    display: none;
+  }
+  .promotion-section-bg::after {
+    display: none;
+  }
+
+  .pormotions-hero-para-responsive-font-padding {
+    padding: 0 !important;
+  }
+
+  .pormotions-hero-height-responsive {
+    height: auto !important;
+  }
+  .pormotions-text-section-margin-responsive {
+    margin-top: 0 !important;
+  }
+
+  .promotion-hero-heading-font-size {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+
+  .pormotions-hero-img-margin-top-responsive {
+    margin-top: 0rem !important;
+  }
+  .promotions-blog-btn-font-size {
+    font-size: 20px !important;
+  }
+
+  /* Promotions Page Styling End */
+
+  /* Body Shop  Page Styling Start*/
+
+  .body-shop-hero-height-responsive {
+    height: auto !important;
+  }
+
+  /* Body Shop  Page Styling End*/
+  /* About us  Page Styling Start*/
+
+  .about-us-hero-height-responsive {
+    height: auto !important;
+  }
+
+  .about-us-our-team-text-padding-responsive {
+    padding: 1.3 !important;
+  }
+  .about-us-our-team-text-aling-responsive {
+    text-align: start !important;
+  }
+  /* About us Page Styling End*/
+
+  /*blogs  Page Styling Start*/
+  .blogs-hero-height-responsive {
+    height: auto !important;
+  }
+  .blogs-hero-heading-font-size-responsive {
+    font-size: calc(1.475rem + 2.7vw);
+  }
+  .blogs-hero-search-font-size-responsive {
+    font-size: 12px;
+  }
+  .blogs-popular-articales-hight-responsive {
+    height: 75vh;
+  }
+  .blogs-popular-articales-margin-top-responsive {
+    margin-top: 3rem;
+  }
+  /*blogs  Page Styling End*/
+
+  /*logo-slider  Styling End*/
+  .logo-slider-responsive-height {
+    height: auto;
+  }
+  /*logo-slider  Styling Start*/
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* yahan par small screens wali styles likho */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* yahan par medium screens wali styles likho */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* yahan par large screens wali styles likho */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .index-hero-card-text-font-size {
+    font-size: 0.75rem;
+  }
+  .contract-why-shoose-section-heading-responsive-font-size {
+    font-size: 35px;
+  }
+  /* Promotions Page Styling Start */
+
+  /* Promotions Page Styling End */
+}
+
+/* XXL screens (Very large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* contract Page Styling Start */
+
+  .contract-why-Choose-heading-font-size {
+    font-size: 2.5rem;
+  }
+
+  /* contract Page Styling End */
+
+  /* promotion Page Styling Start */
+
+  .promotion-hero-heading-font-size {
+    font-size: 3.5rem;
+  }
+  .pormotions-hero-para-responsive-font-padding {
+    padding: 0px 13rem !important;
+  }
+  .pormotions-hero-img-margin-top-responsive {
+    margin-top: 8rem;
+  }
+  /* promotion Page Styling End */
+  /* about-us Styling End */
+  .about-us-our-team-text-padding-responsive {
+    padding: 50px !important;
+  }
+  .about-us-our-team-text-aling-responsive {
+    text-align: justify !important;
+  }
+  /* about-us Styling End */
+  /*blogs  Page Styling Start*/
+
+  .blogs-hero-heading-font-size-responsive {
+    font-size: 4rem;
+  }
+  .blogs-hero-search-font-size-responsive {
+    font-size: 16px;
+  }
+  .blogs-popular-articales-hight-responsive {
+    height: 75vh;
+  }
+  /*blogs  Page Styling End*/
+  
+  /*logo-slider  Styling End*/
+  .logo-slider-responsive-height {
+    height: 100% !important;
+  }
+  /*logo-slider  Styling Start*/
+}

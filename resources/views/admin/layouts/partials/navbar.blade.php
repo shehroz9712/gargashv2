@@ -81,22 +81,15 @@
                         <span>Main Menu</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cashtransactions.create') }}">
+                        <a class="nav-link" href="{{ route('users.index') }}">
                             <i class="iconoir-candlestick-chart menu-icon"></i>
-                            <span>Cash Transaction</span>
-                        </a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('daily.balances') }}">
-                            <i class="iconoir-candlestick-chart menu-icon"></i>
-                            <span>Daily Balances</span>
+                            <span>Users</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('companies.index') }}">
+                        <a class="nav-link" href="{{ route('blogs.index') }}">
                             <i class="iconoir-candlestick-chart menu-icon"></i>
-                            <span>Company</span>
+                            <span>Blogs</span>
                         </a>
                     </li>
                 </ul>
