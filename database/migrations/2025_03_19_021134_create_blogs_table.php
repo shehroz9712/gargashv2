@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+            Schema::create('blogs', function (Blueprint $table) {
+                $table->id();
+                $table->string('title');
+                $table->text('content');
+                $table->string('author_image')->nullable();
+                $table->string('author')->nullable();
+                $table->enum('status', ['draft', 'published', 'archived'])->default('draft');
+                $table->timestamps();
+            });
     }
 
     /**
