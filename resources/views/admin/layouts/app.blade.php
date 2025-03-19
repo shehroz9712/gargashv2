@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@include('layouts.partials.head')
+@include('admin.layouts.partials.head')
 <body>
 
-    @include('layouts.partials.navbar')
+    @include('admin.layouts.partials.navbar')
 
 
     <div class="page-wrapper">
@@ -18,7 +18,7 @@
 
 
             <!--Start Footer-->
-            @include('layouts.partials.footer')
+            @include('admin.layouts.partials.footer')
 
 
 
@@ -26,7 +26,7 @@
         </div>
         <!-- end page content -->
     </div>
-    @include('layouts.partials.scripts')
+    @include('admin.layouts.partials.scripts')
 
 
 
