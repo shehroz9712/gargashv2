@@ -40,7 +40,7 @@ class BlogController extends Controller
                 File::image()->max(2048), // Max size in kilobytes (2MB)
             ],
             'short_content' => 'required|string',
-            'content' => 'required|string',
+            'content' => 'required',
             'author' => 'nullable|string|max:255',
             'author_image' => [
                 'nullable',
@@ -55,14 +55,19 @@ class BlogController extends Controller
 
         // Handle file uploads
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('blog_images', 'public');
+            $imagePath = uploadImage($request->file('image'), 'blog_images');
             $validatedData['image'] = $imagePath;
+        } else {
+            $validatedData['image'] = 'no-image.png';
         }
 
         if ($request->hasFile('author_image')) {
-            $authorImagePath = $request->file('author_image')->store('author_images', 'public');
+            $authorImagePath = uploadImage($request->file('author_image'), 'author_images');
             $validatedData['author_image'] = $authorImagePath;
+        } else {
+            $validatedData['author_image'] = 'no-image.png';
         }
+
 
         // Set default values
         $validatedData['is_featured'] = $request->boolean('is_featured', false);

@@ -114,16 +114,22 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     <!-- Include TinyMCE for rich text editing -->
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/angawkv2xx2vxc4g4fmmz2kga206yrhmrnuu1i2avvbr1n6d/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
     <script>
         tinymce.init({
             selector: '#content',
             menubar: false,
             plugins: 'lists link image table code help wordcount',
             toolbar: 'undo redo | bold italic underline | bullist numlist | link image | code',
-            height: 300
+            height: 300,
+            setup: function(editor) {
+                editor.on('change', function() {
+                    tinymce.triggerSave(); // Updates the textarea value
+                });
+            }
         });
     </script>
 @endsection
