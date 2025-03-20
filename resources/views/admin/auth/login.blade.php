@@ -10,7 +10,7 @@
                             <div class="card">
                                 <div class="card-body p-0 bg-black auth-header-box rounded-top">
                                     <div class="text-center p-3">
-                                        <a href="{{ route('home') }}" class="logo logo-admin">
+                                        <a href="{{ route('user.home') }}" class="logo logo-admin">
                                             Owais & Co.
                                         </a>
                                         <h4 class="mt-3 mb-1 fw-semibold text-white fs-18">Let's Get Started Rizz</h4>
@@ -18,7 +18,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body pt-0">
-                                    <form method="POST" action="{{ route('login') }}">
+                                    <form method="POST" action="{{ route('user.login') }}">
                                         @csrf
                                         <div class="form-group mb-2">
                                             <label class="form-label" for="username">Username</label>
@@ -58,7 +58,7 @@
                                                 </div>
                                             </div><!--end col-->
                                             <div class="col-sm-6 text-end">
-                                                <a href="{{ route('password.request') }}" class="text-muted font-13"><i
+                                                <a href="{{ route('user.password.request') }}" class="text-muted font-13"><i
                                                         class="dripicons-lock"></i> Forgot password?</a>
                                             </div><!--end col-->
                                         </div><!--end form-group-->

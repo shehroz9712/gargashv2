@@ -29,12 +29,22 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         $this->routes(function () {
+            // API Routes
             Route::middleware('api')
                 ->prefix('api')
                 ->group(base_path('routes/api.php'));
 
+            // Web Routes (User)
             Route::middleware('web')
+                ->name('user.') // Keep name prefixing for named routes
                 ->group(base_path('routes/web.php'));
+
+
+            // Admin Routes
+            Route::middleware(['web', 'auth']) // Ensure only logged-in users can access admin
+                ->prefix('admin')
+                ->name('admin.') // Optional: Prefix route names with "admin."
+                ->group(base_path('routes/admin.php'));
         });
     }
 }

@@ -13,7 +13,7 @@
                 </div><!--end card-header-->
 
                 <div class="card-body pt-0">
-                    <form action="{{ route('blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('user.blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 

@@ -11,15 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-            Schema::create('blogs', function (Blueprint $table) {
-                $table->id();
-                $table->string('title');
-                $table->text('content');
-                $table->string('author_image')->nullable();
-                $table->string('author')->nullable();
-                $table->enum('status', ['draft', 'published', 'archived'])->default('draft');
-                $table->timestamps();
-            });
+        Schema::create('blogs', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('slug');
+            $table->string('image');
+            $table->text('content');
+            $table->text('views')->default(0);
+            $table->string('author_image')->nullable();
+            $table->string('author')->nullable();
+            $table->boolean('is_featured')->nullable();
+            $table->enum('status', ['draft', 'published', 'archived'])->default('draft');
+            $table->timestamps();
+        });
     }
 
     /**

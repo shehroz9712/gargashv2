@@ -33,14 +33,14 @@
                     <hr>
 
                     <div class="text-end">
-                        <a href="{{ route('blogs.edit', $blog->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('blogs.destroy', $blog->id) }}" method="POST" class="d-inline"
+                        <a href="{{ route('user.blogs.edit', $blog->id) }}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('user.blogs.destroy', $blog->id) }}" method="POST" class="d-inline"
                             onsubmit="return confirm('Are you sure you want to delete this blog?');">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
-                        <a href="{{ route('blogs.index') }}" class="btn btn-secondary">Back to Blogs</a>
+                        <a href="{{ route('user.blogs.index') }}" class="btn btn-secondary">Back to Blogs</a>
                     </div>
                 </div><!--end card-body-->
             </div><!--end card-->

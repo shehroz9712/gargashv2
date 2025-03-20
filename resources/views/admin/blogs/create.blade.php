@@ -13,7 +13,7 @@
                 </div><!--end card-header-->
 
                 <div class="card-body pt-0">
-                    <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('user.blogs.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-lg-12">
