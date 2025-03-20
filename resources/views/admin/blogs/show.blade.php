@@ -9,20 +9,28 @@
                 </div><!--end card-header-->
 
                 <div class="card-body">
-                    @if ($blog->author_image)
+                    @if ($blog->image)
                         <div class="text-center mb-3">
-                            <img src="{{ asset('storage/' . $blog->author_image) }}" alt="Author Image" class="rounded-circle"
-                                width="100">
+                            <img src="{{ asset('assets/uploads/blog_images/' . $blog->image) }}" alt="Blog Image"
+                                class="img-fluid rounded" width="300">
                         </div>
                     @endif
 
                     <p class="text-muted text-center">
                         <strong>Author:</strong> {{ $blog->author ?? 'Unknown' }} |
-                        <strong>Status:</strong> <span
+                        <strong>Status:</strong>
+                        <span
                             class="badge bg-{{ $blog->status == 'published' ? 'success' : ($blog->status == 'draft' ? 'warning' : 'secondary') }}">
                             {{ ucfirst($blog->status) }}
                         </span>
                     </p>
+
+                    @if ($blog->author_image)
+                        <div class="text-center mb-3">
+                            <img src="{{ asset('assets/uploads/author_images/' . $blog->author_image) }}" alt="Author Image"
+                                class="rounded-circle img-thumbnail" width="100">
+                        </div>
+                    @endif
 
                     <hr>
 
