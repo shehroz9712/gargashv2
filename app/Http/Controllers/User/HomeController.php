@@ -40,6 +40,9 @@ class HomeController extends Controller
     public function blog_detail($slug)
     {
         $blog = Blog::where('id', $slug)->firstOrFail();
+        $blog->update([
+            'views' => $blog->views + 1,
+        ]);
         $blogs = Blog::where('is_featured', true)->where('status', 'published')->orderBy('created_at', 'desc')->paginate(6);
 
         return view('user.blog', compact('blog', 'blogs'));

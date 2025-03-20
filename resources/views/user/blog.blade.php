@@ -53,8 +53,8 @@
     <section class="Featured-section bg-white container rounded-4 py-0">
         <div class="row">
             <div class="col-md-6 p-0">
-                <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="img-fluid w-100"
-                    style="object-fit: cover; object-position: center;">
+                <img src="{{ asset('assets/uploads/blog_images/' . $blog->image) }}" alt="{{ $blog->title }}"
+                    class="img-fluid w-100" style="object-fit: cover; object-position: center;">
             </div>
             <div class="col-md-6 d-flex flex-column gap-3 py-4">
                 @if ($blog->is_featured)
@@ -65,7 +65,7 @@
                 <p class="fs-6 fw-light">{{ $blog->short_content }}</p>
                 <div class="align-items-center d-flex justify-content-between">
                     <div class="align-items-center d-flex gap-2">
-                        <img src="{{ $blog->author_image ? asset('storage/' . $blog->author_image) : asset('default-author.png') }}"
+                        <img src="{{ asset('assets/uploads/blog_images/' . $blog->author_image) }}"
                             alt="{{ $blog->author }}" class="img-fluid" style="max-width: 10%;">
                         <span class="d-flex flex-column gap-1">
                             <h6 class="fs-6 fw-normal m-0">{{ $blog->author }}</h6>
@@ -117,7 +117,8 @@
             <div class="col-md-12 d-flex gap-3 h-75 ">
                 @foreach ($blogs as $featuredBlog)
                     <div class="col-md-3">
-                        <div class="blog-img-5 d-flex flex-column h-100 justify-content-between px-4 py-3 rounded-4">
+                        <div class="blog-img-5 d-flex flex-column h-100 justify-content-between px-4 py-3 rounded-4"
+                            style="    background: url('{{ asset('assets/uploads/blog_images/' . $blog->image) }}') no-repeat center center/cover;">
                             <span
                                 class="Featured badge bg-light px-3 py-2 rounded rounded-pill text-dark w-fit">Featured</span>
                             <h2 class="fs-6 fw-semibold text-light">{{ $featuredBlog->title }}</h2>
@@ -125,8 +126,8 @@
                                 {{ Str::limit($featuredBlog->short_content, 100) }}</p>
                             <div class="d-flex justify-content-between">
                                 <span class="align-items-center d-flex gap-2">
-                                    <img src="{{ asset('assets/img/blog-icon-logo.png') }}" alt=""
-                                        class="img-fluid">
+                                    <img src="{{ asset('assets/uploads/blog_images/' . $featuredBlog->author_image) }}"
+                                        alt="" class="img-fluid">
                                     <span>
                                         <p class="fw-semibold m-0 text-light">By {{ $featuredBlog->author }}</p>
                                         <span class="align-items-center d-flex gap-1" style="font-size: small;">

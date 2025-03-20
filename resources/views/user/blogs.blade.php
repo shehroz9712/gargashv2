@@ -111,7 +111,8 @@
         <section class="Featured-section bg-white container rounded-4 py-0">
             <div class="row">
                 <div class="col-md-6 p-0">
-                    <img src="{{ asset($featuredBlog->image) }}" alt="{{ $featuredBlog->title }}"
+                    <img src="{{ asset('assets/uploads/blog_images/' . $featuredBlog->image) }}"
+                        alt="{{ $featuredBlog->title }}"
                         style="object-fit: cover; object-position: center; background-position: center;">
                 </div>
                 <div class="col-md-6 d-flex flex-column gap-3 py-4">
@@ -122,8 +123,8 @@
                     <p class="fs-6 fw-light">{{ Str::limit($featuredBlog->short_content, 150) }}</p>
                     <div class="align-items-center d-flex justify-content-between">
                         <div class="align-items-center d-flex gap-2">
-                            <img src="{{ asset($featuredBlog->author_image) }}" alt="{{ $featuredBlog->author }}"
-                                class="img-fluid " style="max-width: 10%;">
+                            <img src="{{ asset('assets/uploads/blog_images/' . $featuredBlog->author_image) }}"
+                                alt="{{ $featuredBlog->author }}" class="img-fluid " style="max-width: 10%;">
                             <span class="d-flex flex-column gap-1">
                                 <h6 class="fs-6 fw-normal m-0">{{ $featuredBlog->author }}</h6>
                                 <span class="align-items-center d-flex gap-1">
@@ -156,15 +157,15 @@
             <div class="col-md-12 d-flex flex-column flex-md-row gap-3 h-100">
                 @foreach ($mostViewedBlogs as $index => $blog)
                     <div class="bolg-image-{{ $index + 1 }} col-md-6 d-flex flex-column h-100 justify-content-between px-4 py-3"
-                        style="background-image: url('{{ asset($blog->image) }}'); background-size: cover; background-position: center;">
+                        style="background-image: url('{{ asset('assets/uploads/blog_images/' . $blog->image) }}'); background-size: cover; background-position: center;">
                         <span class="Featured badge bg-light px-3 py-2 rounded rounded-pill text-dark w-fit">Featured</span>
                         <a href="{{ route('user.blog.detail', $blog->id) }}">
                             <div class="d-flex flex-column gap-3 pb-4">
                                 <h2 class="fs-3 fw-semibold lh-sm text-light">{{ $blog->title }}</h2>
                                 <div class="d-flex justify-content-between">
                                     <span class="align-items-center d-flex gap-2">
-                                        <img src="{{ asset('assets/user/img/bolg-icon-logo.png') }}" alt=""
-                                            class="img-fluid">
+                                        <img src="{{ asset('assets/uploads/blog_images/' . $blog->author_image) }}"
+                                            alt="" class="img-fluid">
                                         <span>
                                             <p class="fs-6 fw-bold lh-base m-0 text-light">By {{ $blog->author }}</p>
                                             <span>
@@ -210,7 +211,7 @@
                                         <div class="h-100 col-md-3">
                                             <a href="{{ route('user.blog.detail', $blog->id) }}">
                                                 <div class="d-flex flex-column blog-img-5 h-100 justify-content-between px-4 py-3 rounded-4"
-                                                    style="    background: url('{{ asset($blog->image) }}') no-repeat center center/cover;">
+                                                    style="    background: url('{{ asset('assets/uploads/blog_images/' . $blog->image) }}') no-repeat center center/cover;">
                                                     <span
                                                         class="Featured badge bg-light px-3 py-2 rounded rounded-pill text-dark w-fit">
                                                         Featured
@@ -227,7 +228,7 @@
                                                         <div class="d-flex justify-content-between">
                                                             <span class="d-flex align-items-center gap-2">
                                                                 <img alt="" class="img-fluid"
-                                                                    src="{{ asset('assets/user/user/img/bolg-icon-logo.png') }}">
+                                                                    src="{{ asset('assets/uploads/blog_images/' . $blog->author_image) }}">
                                                                 <span>
                                                                     <p class="m-0 text-light fw-semibold lh-base"
                                                                         style="font-size:small">By {{ $blog->author }}</p>

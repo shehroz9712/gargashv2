@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\File;
@@ -100,28 +101,54 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'title' => 'required|string|max:255',
+            'slug' => 'required|string|max:255|unique:blogs,slug,' . $blog->id,
+            'image' => [
+                'nullable',
+                File::image()->max(2048), // Max size in kilobytes (2MB)
+            ],
+            'short_content' => 'required|string',
             'content' => 'required',
             'author' => 'nullable|string|max:255',
-            'author_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'status' => 'required|in:draft,published,archived',
+            'author_image' => [
+                'nullable',
+                File::image()->max(2048), // Max size in kilobytes (2MB)
+            ],
+            'is_featured' => 'nullable|boolean',
+            'status' => [
+                'required',
+                Rule::in(['draft', 'published', 'archived']),
+            ],
         ]);
 
-        if ($request->hasFile('author_image')) {
-            $imagePath = $request->file('author_image')->store('author_images', 'public');
-            $blog->author_image = $imagePath;
+        // Handle file uploads
+        if ($request->hasFile('image')) {
+            $imagePath = uploadImage($request->file('image'), 'blog_images');
+            $validatedData['image'] = $imagePath;
+
+            // Delete old image if it exists and is not the default one
+            if ($blog->image && $blog->image !== 'no-image.png') {
+                Storage::delete('public/blog_images/' . $blog->image);
+            }
         }
 
-        $blog->update([
-            'title' => $request->title,
-            'content' => $request->content,
-            'author' => $request->author,
-            'status' => $request->status,
-        ]);
+        if ($request->hasFile('author_image')) {
+            $authorImagePath = uploadImage($request->file('author_image'), 'author_images');
+            $validatedData['author_image'] = $authorImagePath;
 
-        return redirect()->route('admin.blogs.index')->with('success', 'Blog updated successfully.');
+            // Delete old author image if it exists and is not the default one
+            if ($blog->author_image && $blog->author_image !== 'no-image.png') {
+                Storage::delete('public/author_images/' . $blog->author_image);
+            }
+        }
+
+        // Update the blog post
+        $blog->update($validatedData);
+
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog post updated successfully.');
     }
+
 
     /**
      * Remove the specified resource from storage.
