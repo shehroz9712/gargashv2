@@ -8,17 +8,7 @@
                         <i class="iconoir-menu-scale"></i>
                     </button>
                 </li>
-                <li class="mx-3 welcome-text">
-                    <h3 class="mb-0 fw-bold text-truncate">Good Morning, {{ Auth()->user()->name }}
 
-                        @if ($dailyBalance && $dailyBalance->status == 'open')
-                            <a href="{{ route('user.daily.balance.close') }}" class="btn btn-danger">Close Store</a>
-                        @else
-                            <a href="{{ route('user.daily.balance.open') }}" class="btn btn-success">Open Store</a>
-                        @endif
-                    </h3>
-
-                </li>
             </ul>
             <ul class="topbar-item list-unstyled d-inline-flex align-items-center mb-0">
                 <li class="dropdown topbar-item">
@@ -43,12 +33,12 @@
                         <a class="dropdown-item" href="pages-profile.html"><i
                                 class="las la-user fs-18 me-1 align-text-bottom"></i> Profile</a>
                         <div class="dropdown-divider mb-0"></div>
-                        <a class="dropdown-item text-danger" href="href=" {{ route('user.logout') }}"
+                        <a class="dropdown-item text-danger" href="href=" {{ route('admin.logout') }}"
                             onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();"><i
                                 class="las la-power-off fs-18 me-1 align-text-bottom"></i> Logout</a>
 
-                        <form id="logout-form" action="{{ route('user.logout') }}" method="POST" class="d-none">
+                        <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
                     </div>
@@ -63,9 +53,10 @@
 <div class="startbar d-print-none">
 
     <div class="brand">
-        <a href="{{ route('user.home') }}" class="logo">
+        <a href="{{ route('admin.dashboard') }}" class="logo">
             <span>
-                Owais & Co.
+                <img src="{{ asset('assets/user/img/logo.png') }}" class="logo-here w-100 object-cover"
+                    alt="" />
             </span>
 
         </a>
@@ -81,13 +72,13 @@
                         <span>Main Menu</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('user.users.index') }}">
+                        <a class="nav-link" href="{{ route('admin.users.index') }}">
                             <i class="iconoir-candlestick-chart menu-icon"></i>
                             <span>Users</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('user.blogs.index') }}">
+                        <a class="nav-link" href="{{ route('admin.blogs.index') }}">
                             <i class="iconoir-candlestick-chart menu-icon"></i>
                             <span>Blogs</span>
                         </a>

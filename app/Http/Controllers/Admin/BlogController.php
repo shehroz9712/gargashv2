@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\File;
 
 class BlogController extends Controller
 {
@@ -13,7 +16,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::latest()->get();
-        return view('blogs.index', compact('blogs'));
+        return view('admin.blogs.index', compact('blogs'));
     }
 
     /**
@@ -21,7 +24,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blogs.create');
+        return view('admin.blogs.create');
     }
 
     /**
@@ -29,28 +32,46 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'title' => 'required|string|max:255',
-            'content' => 'required',
+            'slug' => 'required|string|max:255|unique:blogs,slug',
+            'image' => [
+                'nullable',
+                File::image()->max(2048), // Max size in kilobytes (2MB)
+            ],
+            'short_content' => 'required|string',
+            'content' => 'required|string',
             'author' => 'nullable|string|max:255',
-            'author_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'status' => 'required|in:draft,published,archived',
+            'author_image' => [
+                'nullable',
+                File::image()->max(2048), // Max size in kilobytes (2MB)
+            ],
+            'is_featured' => 'nullable|boolean',
+            'status' => [
+                'required',
+                Rule::in(['draft', 'published', 'archived']),
+            ],
         ]);
 
-        $imagePath = null;
-        if ($request->hasFile('author_image')) {
-            $imagePath = $request->file('author_image')->store('author_images', 'public');
+        // Handle file uploads
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('blog_images', 'public');
+            $validatedData['image'] = $imagePath;
         }
 
-        Blog::create([
-            'title' => $request->title,
-            'content' => $request->content,
-            'author' => $request->author,
-            'author_image' => $imagePath,
-            'status' => $request->status,
-        ]);
+        if ($request->hasFile('author_image')) {
+            $authorImagePath = $request->file('author_image')->store('author_images', 'public');
+            $validatedData['author_image'] = $authorImagePath;
+        }
 
-        return redirect()->route('blogs.index')->with('success', 'Blog created successfully.');
+        // Set default values
+        $validatedData['is_featured'] = $request->boolean('is_featured', false);
+        $validatedData['views'] = 0;
+
+        // Create the blog post
+        Blog::create($validatedData);
+
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog post created successfully.');
     }
 
     /**
@@ -58,7 +79,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        return view('blogs.show', compact('blog'));
+        return view('admin.blogs.show', compact('blog'));
     }
 
     /**
@@ -66,7 +87,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        return view('blogs.edit', compact('blog'));
+        return view('admin.blogs.edit', compact('blog'));
     }
 
     /**
@@ -94,7 +115,7 @@ class BlogController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect()->route('blogs.index')->with('success', 'Blog updated successfully.');
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog updated successfully.');
     }
 
     /**
@@ -103,6 +124,6 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         $blog->delete();
-        return redirect()->route('blogs.index')->with('success', 'Blog deleted successfully.');
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog deleted successfully.');
     }
 }

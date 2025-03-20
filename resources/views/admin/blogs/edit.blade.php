@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
     <div class="row justify-content-center">
@@ -13,7 +13,7 @@
                 </div><!--end card-header-->
 
                 <div class="card-body pt-0">
-                    <form action="{{ route('user.blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 

@@ -18,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
-
+    protected $namespace = 'App\\Http\\Controllers';
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      */
@@ -41,7 +41,7 @@ class RouteServiceProvider extends ServiceProvider
 
 
             // Admin Routes
-            Route::middleware(['web', 'auth']) // Ensure only logged-in users can access admin
+            Route::middleware(['web']) // Ensure only logged-in users can access admin
                 ->prefix('admin')
                 ->name('admin.') // Optional: Prefix route names with "admin."
                 ->group(base_path('routes/admin.php'));

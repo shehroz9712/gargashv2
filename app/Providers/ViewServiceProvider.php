@@ -22,14 +22,6 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        try {
-            $dailyBalance = DailyBalance::where('status', 'open')->first();
-
-
-            View::share(['dailyBalance' => $dailyBalance]);
-        } catch (QueryException $e) {
-            $dailyBalance = new dailyBalance();
-            View::share(['dailyBalance' => $dailyBalance]);
-        }
+       
     }
 }

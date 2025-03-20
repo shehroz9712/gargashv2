@@ -14,7 +14,7 @@ class Authenticate extends Middleware
     {
         // Check if the route is an admin route
         if ($request->is('admin/*')) {
-            return route('login'); // Redirect to login only for admin routes
+            return route('admin.login'); // Redirect to login only for admin routes
         }
 
         return null; // Allow other routes (user pages) to work without authentication

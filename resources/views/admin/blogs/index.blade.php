@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
     <div class="row justify-content-center">
@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Blogs</h4>
-                    <a href="{{ route('user.blogs.create') }}" class="btn btn-primary float-end">Add New Blog</a>
+                    <a href="{{ route('admin.blogs.create') }}" class="btn btn-primary float-end">Add New Blog</a>
                 </div><!--end card-header-->
 
                 <div class="card-body">
@@ -35,10 +35,10 @@
                                     </td>
                                     <td>{{ $blog->created_at->format('d M, Y') }}</td>
                                     <td>
-                                        <a href="{{ route('user.blogs.show', $blog->id) }}" class="btn btn-sm btn-info">View</a>
-                                        <a href="{{ route('user.blogs.edit', $blog->id) }}"
+                                        <a href="{{ route('admin.blogs.show', $blog->id) }}" class="btn btn-sm btn-info">View</a>
+                                        <a href="{{ route('admin.blogs.edit', $blog->id) }}"
                                             class="btn btn-sm btn-warning">Edit</a>
-                                        <form action="{{ route('user.blogs.destroy', $blog->id) }}" method="POST"
+                                        <form action="{{ route('admin.blogs.destroy', $blog->id) }}" method="POST"
                                             class="d-inline"
                                             onsubmit="return confirm('Are you sure you want to delete this blog?');">
                                             @csrf
