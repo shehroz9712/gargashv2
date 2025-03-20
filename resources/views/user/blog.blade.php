@@ -17,6 +17,7 @@
             </div>
             <div class="align-items-center d-flex gap-4 flex-column justify-content-center w-100">
                 <form action="{{ route('user.blog.search') }}" method="GET">
+                    @csrf
                     <div class="align-items-center bg-white d-flex justify-content-between px-3 py-2 rounded-3 w-75">
                         <span class="align-items-center d-flex gap-3">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -49,57 +50,45 @@
             }
         }
     </style>
-    @if ($featuredBlog)
-        <section class="Featured-section bg-white container rounded-4 py-0">
-            <div class="row">
-                <div class="col-md-6 p-0">
-                    <img src="{{ asset($featuredBlog->image) }}" alt="{{ $featuredBlog->title }}"
-                        style="object-fit: cover; object-position: center; background-position: center;">
-                </div>
-                <div class="col-md-6 d-flex flex-column gap-3 py-4">
-                    <span class="Featured badge p-2 rounded w-fit" style="color: #36B37E; background: #36b37e29;">
-                        Featured
-                    </span>
-                    <h2 class="fw-bold" style="color: #183B56;">{{ $featuredBlog->title }}</h2>
-                    <p class="fs-6 fw-light">{{ Str::limit($featuredBlog->content, 150) }}</p>
-                    <div class="align-items-center d-flex justify-content-between">
-                        <div class="align-items-center d-flex gap-2">
-                            <img src="{{ asset($featuredBlog->author_image) }}" alt="{{ $featuredBlog->author }}"
-                                class="img-fluid " style="max-width: 10%;">
-                            <span class="d-flex flex-column gap-1">
-                                <h6 class="fs-6 fw-normal m-0">{{ $featuredBlog->author }}</h6>
-                                <span class="align-items-center d-flex gap-1">
-                                    <i class="fa-solid fa-circle-check" style="color: #36B37E; background: #36b37e29;"></i>
-                                    <p class="m-0">Verified Author</p>
-                                </span>
+    <section class="Featured-section bg-white container rounded-4 py-0">
+        <div class="row">
+            <div class="col-md-6 p-0">
+                <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="img-fluid w-100"
+                    style="object-fit: cover; object-position: center;">
+            </div>
+            <div class="col-md-6 d-flex flex-column gap-3 py-4">
+                @if ($blog->is_featured)
+                    <span class="Featured badge p-2 rounded w-fit"
+                        style="color: #36B37E; background: #36b37e29;">Featured</span>
+                @endif
+                <h2 class="fw-bold text-dark">{{ $blog->title }}</h2>
+                <p class="fs-6 fw-light">{{ $blog->short_content }}</p>
+                <div class="align-items-center d-flex justify-content-between">
+                    <div class="align-items-center d-flex gap-2">
+                        <img src="{{ $blog->author_image ? asset('storage/' . $blog->author_image) : asset('default-author.png') }}"
+                            alt="{{ $blog->author }}" class="img-fluid" style="max-width: 10%;">
+                        <span class="d-flex flex-column gap-1">
+                            <h6 class="fs-6 fw-normal m-0">{{ $blog->author }}</h6>
+                            <span class="align-items-center d-flex gap-1">
+                                <i class="fa-solid fa-circle-check" style="color: #36B37E; background: #36b37e29;"></i>
+                                <p class="m-0">Verified Author</p>
                             </span>
-                        </div>
+                        </span>
                     </div>
                 </div>
             </div>
-        </section>
-    @endif
-
+        </div>
+    </section>
     <!-- Featured Section End -->
     <!-- Text Area Start -->
     <section class="container">
         <div class="d-flex flex-column gap-3">
             <h2 class="fs-2 fw-semibold text-black text-center w-fit mx-auto" style="border-bottom:2px solid #E6B110;">How
-                This Specialist Luxury Car Workshop Came to Be</h2>
-            <span>
-                <p>Our journey began with a passion for high-performance vehicles and a commitment to providing top-tier
-                    service for luxury car owners. Recognizing the need for a dedicated workshop specializing in premium
-                    automotive brands, we set out to create a space where precision, expertise, and customer satisfaction
-                    come first.</p>
-                <p>With years of experience in the automotive industry, our team of highly skilled professionals ensures
-                    that every vehicle receives the care and attention it deserves. From routine maintenance to complex
-                    repairs, we utilize advanced technology and industry-leading techniques to deliver exceptional results.
-                </p>
-                <p>Driven by our love for luxury cars and a vision to set new standards in automotive servicing, our
-                    workshop has grown into a trusted name among enthusiasts and collectors. Our dedication to quality
-                    workmanship and customer trust continues to fuel our success, making us the go-to destination for
-                    specialist luxury car care.</p>
-            </span>
+                {{ $blog->title }}</h2>
+
+
+            {!! $blog->content !!}
+
         </div>
     </section>
     <!-- Text Area End -->
@@ -123,45 +112,36 @@
     </section>
     <!-- Recent Articles Section End-->
     <!-- Bold Section Start-->
-    <p>asasas</p>
     <div class="container vh-100">
         <div class="row justify-content-center align-items-center g-2 h-100">
             <div class="col-md-12 d-flex gap-3 h-75 ">
-                @foreach ($blogs as $blog)
-                    <div class="blog-img-5 col-md-3 d-flex flex-column h-100 justify-content-between px-4 py-3 rounded-4">
-                        <span class="Featured badge bg-light px-3 py-2 rounded rounded-pill text-dark w-fit">Featured</span>
-                        <div class="d-flex flex-column gap-3 pb-4">
-                            <div>
-                                <h2 class="fs-6 fw-semibold lh-sm text-light">{{ $blog->title }}</h2>
-                                <p class="fw-light lh-sm m-0 text-light" style="font-size: 0.8rem;">
-                                    {{ Str::limit($blog->excerpt, 100) }}
-                                </p>
-                            </div>
+                @foreach ($blogs as $featuredBlog)
+                    <div class="col-md-3">
+                        <div class="blog-img-5 d-flex flex-column h-100 justify-content-between px-4 py-3 rounded-4">
+                            <span
+                                class="Featured badge bg-light px-3 py-2 rounded rounded-pill text-dark w-fit">Featured</span>
+                            <h2 class="fs-6 fw-semibold text-light">{{ $featuredBlog->title }}</h2>
+                            <p class="fw-light text-light" style="font-size: 0.8rem;">
+                                {{ Str::limit($featuredBlog->short_content, 100) }}</p>
                             <div class="d-flex justify-content-between">
                                 <span class="align-items-center d-flex gap-2">
-                                    <img src="{{ asset('assets/user/img/bolg-icon-logo.png') }}" alt=""
+                                    <img src="{{ asset('assets/img/blog-icon-logo.png') }}" alt=""
                                         class="img-fluid">
                                     <span>
-                                        <p class="fw-semibold lh-base m-0 text-light" style="font-size: small;">By
-                                            {{ $blog->author }}</p>
-                                        <span>
-                                            <span class="align-items-center d-flex gap-1" style="font-size: small;">
-                                                <i class="fa-solid fa-circle-check"
-                                                    style="color: #36B37E; background: #36b37e29;"></i>
-                                                <p class=" fw-lighter m-0 text-light" style="font-size: x-small;">Verified
-                                                </p>
-                                            </span>
+                                        <p class="fw-semibold m-0 text-light">By {{ $featuredBlog->author }}</p>
+                                        <span class="align-items-center d-flex gap-1" style="font-size: small;">
+                                            <i class="fa-solid fa-circle-check"
+                                                style="color: #36B37E; background: #36b37e29;"></i>
+                                            <p class="fw-lighter m-0 text-light" style="font-size: x-small;">Verified</p>
                                         </span>
                                     </span>
                                 </span>
                                 <p class="m-0 my-auto text-secondary" style="font-size: small;">
-                                    {{ $blog->created_at->format('F d, Y') }}
-                                </p>
+                                    {{ $featuredBlog->created_at->format('F d, Y') }}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
             </div>
         </div>
     </div>

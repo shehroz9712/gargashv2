@@ -119,7 +119,7 @@
                         Featured
                     </span>
                     <h2 class="fw-bold" style="color: #183B56;">{{ $featuredBlog->title }}</h2>
-                    <p class="fs-6 fw-light">{{ Str::limit($featuredBlog->content, 150) }}</p>
+                    <p class="fs-6 fw-light">{{ Str::limit($featuredBlog->short_content, 150) }}</p>
                     <div class="align-items-center d-flex justify-content-between">
                         <div class="align-items-center d-flex gap-2">
                             <img src="{{ asset($featuredBlog->author_image) }}" alt="{{ $featuredBlog->author }}"
@@ -151,11 +151,11 @@
             </div>
         </div>
     </section>
-    <div class="container vh-100">  
+    <div class="container vh-100">
         <div class="row justify-content-center align-items-center g-2 h-100">
             <div class="col-md-12 d-flex flex-column flex-md-row gap-3 h-100">
                 @foreach ($mostViewedBlogs as $index => $blog)
-                    <div class="bolg-image-{{ $index + 1 }} col-md-6 d-flex flex-column h-100 justify-content-between px-4 py-3" 
+                    <div class="bolg-image-{{ $index + 1 }} col-md-6 d-flex flex-column h-100 justify-content-between px-4 py-3"
                         style="background-image: url('{{ asset($blog->image) }}'); background-size: cover; background-position: center;">
                         <span class="Featured badge bg-light px-3 py-2 rounded rounded-pill text-dark w-fit">Featured</span>
                         <a href="{{ route('user.blog.detail', $blog->id) }}">
@@ -163,12 +163,14 @@
                                 <h2 class="fs-3 fw-semibold lh-sm text-light">{{ $blog->title }}</h2>
                                 <div class="d-flex justify-content-between">
                                     <span class="align-items-center d-flex gap-2">
-                                        <img src="{{ asset('assets/user/img/bolg-icon-logo.png') }}" alt="" class="img-fluid">
+                                        <img src="{{ asset('assets/user/img/bolg-icon-logo.png') }}" alt=""
+                                            class="img-fluid">
                                         <span>
                                             <p class="fs-6 fw-bold lh-base m-0 text-light">By {{ $blog->author }}</p>
                                             <span>
                                                 <span class="align-items-center d-flex gap-1">
-                                                    <i class="fa-solid fa-circle-check" style="color: #36B37E; background: #36b37e29;"></i>
+                                                    <i class="fa-solid fa-circle-check"
+                                                        style="color: #36B37E; background: #36b37e29;"></i>
                                                     <p class="fs-6 fw-lighter m-0 text-light">Verified</p>
                                                 </span>
                                             </span>
@@ -183,7 +185,7 @@
             </div>
         </div>
     </div>
-    
+
     <section class="container py-5">
         <div class="row">
             <div class="col-md-12 text-start">
@@ -219,7 +221,7 @@
                                                                 {{ $blog->title }}</h2>
                                                             <p class="m-0 text-light fw-light lh-sm"
                                                                 style="font-size:.8rem">
-                                                                {{ Str::limit($blog->excerpt, 100) }}
+                                                                {{ Str::limit($blog->short_content, 100) }}
                                                             </p>
                                                         </div>
                                                         <div class="d-flex justify-content-between">
